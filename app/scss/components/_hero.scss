@@ -2,7 +2,7 @@
 
 .hero {
   background-color: var(--hero-bg);
-  color: var(--text-dark);
+  // color: var(--text-dark-black);
 
   &__wrapper {
     // display: flex;
@@ -13,19 +13,20 @@
     gap: 40px;
     justify-items: center;
     align-items: center;
+    text-align: center;
     padding-block: 30px 60px;
 
     @include u.breakpoint(large) {
       // flex-direction: row-reverse;
       grid-template-columns: 6fr 5fr;
-
       padding-block: 40px 80px;
       gap: 10%;
+      text-align: start;
     }
   }
 
   &__image {
-    width: 62%;
+    width: 61%;
     max-width: u.rem(483);
 
     @include u.breakpoint(large) {
@@ -33,24 +34,12 @@
       order: 2;
       width: 100%;
     }
-
-    // // width: u.rem(200);
-
-    // // @include u.breakpoint(large) {
-    // //   width: u.rem(483);
-    // }
   }
 
   &__text {
     @include u.breakpoint(large) {
-      flex: 6;
+      // flex: 6;
     }
-  }
-
-  &__title {
-  }
-
-  &__content {
   }
 
   &__button {
