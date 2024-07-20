@@ -1,19 +1,18 @@
-@use '../util/' as u;
+@use '../util' as u;
 
 .hero {
   background-color: var(--hero-bg);
-  // color: var(--text-dark-black);
+  color: var(--text-light);
 
   &__wrapper {
     // display: flex;
-    // flex-direction: column-reverse;
+    // flex-direction: column;
     // align-items: center;
     display: grid;
     grid-template-columns: 1fr;
     gap: 40px;
     justify-items: center;
     align-items: center;
-    text-align: center;
     padding-block: 30px 60px;
 
     @include u.breakpoint(large) {
@@ -21,7 +20,6 @@
       grid-template-columns: 6fr 5fr;
       padding-block: 40px 80px;
       gap: 10%;
-      text-align: start;
     }
   }
 
@@ -43,7 +41,7 @@
   }
 
   &__button {
-    &.primary {
+    &:first-of-type {
       margin-inline-end: 20px;
     }
   }
